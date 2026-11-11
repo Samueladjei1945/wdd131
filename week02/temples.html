@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Album – WDD 131 – Adjei Tutu Samuel</title>
+  <meta name="description" content="Temple Album, a responsive picture album page for WDD 131 – Dynamic Web Fundamentals by Adjei Tutu Samuel: temples, photos, responsive design, hamburger menu.">
+  <meta name="author" content="Adjei Tutu Samuel">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Mulish:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-bar">
+      <span class="site-title">Temple Album</span>
+      <button id="menu" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">&#9776;</button>
+    </div>
+    <nav id="primary-nav" aria-label="Main navigation">
+      <a href="#" class="active">Home</a>
+      <a href="#">Old</a>
+      <a href="#">New</a>
+      <a href="#">Large</a>
+      <a href="#">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+    <div class="gallery">
+      <figure>
+        <img src="images/temp 1.jfif" alt="Accra Ghana Temple" width="640" height="420" loading="lazy">
+        <figcaption>Accra Ghana Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temp 2.jfif" alt="Kumasi Ghana Temple" width="640" height="420" loading="lazy">
+        <figcaption>Kumasi Ghana Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temp 3.jpg" alt="Aba Nigeria Temple" width="640" height="420" loading="lazy">
+        <figcaption>Aba Nigeria Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temp 4.jfif" alt="Lagos Nigeria Temple" width="640" height="420" loading="lazy">
+        <figcaption>Lagos Nigeria Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temp55.jfif" alt="Abidjan Ivory Coast Temple" width="640" height="420" loading="lazy">
+        <figcaption>Abidjan Ivory Coast Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temp 6.jfif" alt="Kinshasa Democratic Republic of the Congo Temple" width="640" height="420" loading="lazy">
+        <figcaption>Kinshasa DR Congo Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temp 7.jfif" alt="Johannesburg South Africa Temple" width="640" height="420" loading="lazy">
+        <figcaption>Johannesburg South Africa Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temp 8.jfif" alt="Salt Lake Temple" width="640" height="420" loading="lazy">
+        <figcaption>Salt Lake Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temp 9.jfif" alt="Rome Italy Temple" width="640" height="420" loading="lazy">
+        <figcaption>Rome Italy Temple</figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Adjei Tutu Samuel &ndash; Ghana</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
