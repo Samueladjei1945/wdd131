@@ -123,6 +123,8 @@ figure img {
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 3 / 2;   /* every photo gets the same frame */
+  object-fit: cover;     /* crop to fill instead of stretching */
 }
 
 figcaption {

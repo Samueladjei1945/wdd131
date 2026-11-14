@@ -1,12 +1,19 @@
 /* Larger view: 700px and up */
 @media (min-width: 700px) {
+  /* Title on the left, nav links on the right */
+  header {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+
   .header-bar {
-    justify-content: center;
-    padding: 1.25rem 1rem 0.5rem;
+    padding: 0.9rem 0;
   }
 
   .site-title {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
   }
 
   /* The hamburger button is for the mobile view only */
@@ -18,16 +25,20 @@
   nav.open {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: stretch;
     gap: 0.25rem;
-    padding: 0 1rem;
+    background: none;
+    padding: 0;
   }
 
   nav a {
+    display: flex;
+    align-items: center;
     border-top: none;
     border-left: none;
     border-bottom: 4px solid transparent;
-    padding: 0.9rem 1.4rem;
+    padding: 0 1.1rem;
   }
 
   nav a:hover,
