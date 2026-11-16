@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghana – WDD 131 – Adjei Tutu Samuel</title>
+  <meta name="description" content="Ghana country page for WDD 131 – Dynamic Web Fundamentals by Adjei Tutu Samuel: facts about Ghana, capital Accra, currency, languages and current weather.">
+  <meta name="author" content="Adjei Tutu Samuel">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Ghana</h1>
+    <p class="tagline">Gateway to West Africa</p>
+  </header>
+
+  <main>
+    <div class="hero">
+      <picture>
+        <source media="(min-width: 1000px)" srcset="images/ghana-hero-large.webp" type="image/webp">
+        <source media="(min-width: 600px)" srcset="images/ghana-hero-medium.webp" type="image/webp">
+        <img src="images/ghana-hero-small.webp" alt="Sunset over the Ghana coastline with palm trees" width="480" height="520" fetchpriority="high">
+      </picture>
+
+      <section class="card data" aria-labelledby="data-heading">
+        <h2 id="data-heading">Ghana Data</h2>
+        <dl>
+          <dt>Capital:</dt>
+          <dd>Accra</dd>
+          <dt>Population:</dt>
+          <dd>About 34 million</dd>
+          <dt>Area:</dt>
+          <dd>238,535 km&sup2;</dd>
+          <dt>Official language:</dt>
+          <dd>English</dd>
+          <dt>Currency:</dt>
+          <dd>Ghanaian cedi (GH&cent;)</dd>
+          <dt>Independence:</dt>
+          <dd>6 March 1957</dd>
+          <dt>Major cities:</dt>
+          <dd>Accra, Kumasi, Tamale, Takoradi</dd>
+        </dl>
+      </section>
+
+      <section class="card weather" aria-labelledby="weather-heading">
+        <h2 id="weather-heading">Weather</h2>
+        <img class="weather-icon" src="images/weather.svg" alt="Partly cloudy" width="48" height="48">
+        <p><strong>Temperature:</strong> <span id="temperature">30</span>&deg;C</p>
+        <p><strong>Conditions:</strong> Partly cloudy</p>
+        <p><strong>Wind:</strong> <span id="wind-speed">10</span> km/h</p>
+        <p><strong>Wind chill:</strong> <span id="windchill"></span></p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Adjei Tutu Samuel &ndash; Ghana</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

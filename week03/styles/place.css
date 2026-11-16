@@ -1,0 +1,161 @@
+/* Mobile-first styles; media queries for larger views at the bottom */
+:root {
+  --red: #ce1126;
+  --gold: #fcd116;
+  --green: #006b3f;
+  --green-dark: #04482b;
+  --black: #1a1a1a;
+  --cream: #fffaf0;
+  --font-display: "Bitter", Georgia, serif;
+  --font-body: "Nunito Sans", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--black);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+header {
+  background: var(--green);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 1rem 0.75rem;
+  border-bottom: 6px solid var(--gold);
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.tagline {
+  margin: 0;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* ---------- Hero and cards (mobile: stacked) ---------- */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero picture,
+.hero picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  margin: 1.25rem 1rem;
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid #e5dcc4;
+  border-top: 5px solid var(--red);
+  border-radius: 8px;
+}
+
+.card h2 {
+  font-family: var(--font-display);
+  color: var(--green-dark);
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35rem 0.75rem;
+  margin: 0;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin: 0;
+}
+
+.weather p {
+  margin: 0.25rem 0;
+}
+
+/* SVG weather icon: mobile view only */
+.weather-icon {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--black);
+  color: #f1ead6;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.95rem;
+  border-top: 6px solid var(--gold);
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+/* ---------- Larger view: cards overlay the hero ---------- */
+@media (min-width: 700px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero {
+    position: relative;
+  }
+
+  .card {
+    position: absolute;
+    width: min(340px, 42%);
+    margin: 0;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  }
+
+  .data {
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .weather {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+
+  /* hide the SVG; an emoji pseudo-element takes its place */
+  .weather-icon {
+    display: none;
+  }
+
+  .weather h2::after {
+    content: "\26C5";
+    margin-left: 0.4rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .card {
+    width: 360px;
+  }
+}
