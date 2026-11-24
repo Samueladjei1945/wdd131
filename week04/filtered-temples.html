@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtered Temple Album – WDD 131 – Adjei Tutu Samuel</title>
+  <meta name="description" content="Filtered Temple Album, a responsive picture album page that filters temples by age and size, for WDD 131 – Dynamic Web Fundamentals by Adjei Tutu Samuel: temples, photos, responsive design, hamburger menu.">
+  <meta name="author" content="Adjei Tutu Samuel">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Mulish:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css">
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-bar">
+      <span class="site-title">Temple Album</span>
+      <button id="menu" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">&#9776;</button>
+    </div>
+    <nav id="primary-nav" aria-label="Main navigation">
+      <a href="#" id="home" class="active" aria-current="page">Home</a>
+      <a href="#" id="old">Old</a>
+      <a href="#" id="new">New</a>
+      <a href="#" id="large">Large</a>
+      <a href="#" id="small">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+    <div class="gallery" id="gallery"></div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Adjei Tutu Samuel &ndash; Ghana</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
