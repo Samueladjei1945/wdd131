@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taste of Ghana – Website Plan</title>
+  <meta name="description" content="The site plan for Taste of Ghana, a student guide to Ghanaian dishes, recipes and food traditions.">
+  <meta name="author" content="Adjei Tutu Samuel">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-header: #173c30;
+      --color-background: #f6f2e9;
+      --color-accent: #a45b48;
+      --color-gold: #c3a36b;
+      --color-text: #24231f;
+      --font-heading: "Cormorant Garamond", Georgia, serif;
+      --font-body: "Manrope", Arial, sans-serif;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--color-background);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      line-height: 1.6;
+    }
+
+    header,
+    footer {
+      background: var(--color-header);
+      color: #ffffff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header {
+      border-bottom: 4px solid var(--color-gold);
+    }
+
+    header p {
+      margin: 0;
+      color: var(--color-gold);
+    }
+
+    h1,
+    h2,
+    figcaption {
+      font-family: var(--font-heading);
+    }
+
+    h1 {
+      margin: 0.25rem 0 0;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem 3rem;
+    }
+
+    section {
+      margin: 2rem 0;
+      padding: 1.25rem;
+      border: 1px solid #ded5c5;
+      border-radius: 0.5rem;
+      background: #fffdf9;
+    }
+
+    h2 {
+      display: inline-block;
+      margin: 0 0 0.75rem;
+      border-bottom: 3px solid var(--color-gold);
+    }
+
+    .font-display {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+    }
+
+    .font-body {
+      font-family: var(--font-body);
+    }
+
+    .swatches {
+      list-style: none;
+      padding: 0;
+    }
+
+    .swatches li {
+      margin: 0.6rem 0;
+    }
+
+    .swatch {
+      display: inline-block;
+      width: 3rem;
+      height: 1.5rem;
+      margin-right: 0.5rem;
+      border: 1px solid #777;
+      vertical-align: middle;
+    }
+
+    .wireframes {
+      display: grid;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .wireframes figure {
+      margin: 0;
+    }
+
+    .wireframes figcaption {
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .wireframe {
+      display: grid;
+      gap: 0.4rem;
+      padding: 0.6rem;
+      border: 2px solid var(--color-text);
+      background: #ffffff;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    .wireframe > div {
+      padding: 0.75rem 0.35rem;
+      border: 1px solid #777;
+      background: var(--color-background);
+    }
+
+    .wireframe small {
+      color: #555;
+    }
+
+    .wf-header,
+    .wf-links,
+    .wf-footer {
+      background: #e4eee6 !important;
+    }
+
+    .wf-nav {
+      background: #f8edc8 !important;
+    }
+
+    .wf-welcome {
+      background: #f5e1df !important;
+    }
+
+    .wf-dish {
+      min-height: 8rem;
+      background: #e7e5df !important;
+    }
+
+    .mobile {
+      width: min(100%, 300px);
+      margin: 0 auto;
+    }
+
+    .desktop {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .desktop .wf-header,
+    .desktop .wf-nav,
+    .desktop .wf-links,
+    .desktop .wf-footer {
+      grid-column: 1 / -1;
+    }
+
+    .desktop .wf-welcome,
+    .desktop .wf-dish {
+      display: grid;
+      min-height: 11rem;
+      align-content: center;
+    }
+
+    @media (min-width: 700px) {
+      .wireframes {
+        grid-template-columns: minmax(220px, 0.7fr) 1.5fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p>Website planning document</p>
+    <h1>Taste of Ghana</h1>
+  </header>
+
+  <main>
+    <section id="naming-conventions">
+      <h2>File and Folder Names</h2>
+      <p>Project files use lowercase, descriptive names with no spaces. Pages include <code>index.html</code>, <code>dishes.html</code>, <code>recipes.html</code>, <code>regions.html</code>, <code>contact.html</code>, <code>references.html</code> and <code>siteplan.html</code>. The site styles, scripts and images are organized in the lowercase <code>styles/</code>, <code>scripts/</code> and <code>images/</code> folders. This standalone plan keeps its styles and year display in <code>siteplan.html</code>.</p>
+    </section>
+
+    <section id="site-name">
+      <h2>Site Name</h2>
+      <p><strong>Taste of Ghana</strong> is a friendly guide to the meals and food traditions I grew up with. The name is short, easy to remember and tells visitors exactly what the site celebrates.</p>
+    </section>
+
+    <section id="site-purpose">
+      <h2>Site Purpose</h2>
+      <p>The site introduces popular Ghanaian dishes, shares approachable recipes and ingredient amounts, and connects foods with the regions and communities where they are enjoyed. Visitors can search and filter the photo gallery, save favorite dishes, print recipes and suggest an idea.</p>
+    </section>
+
+    <section id="scenarios">
+      <h2>Scenarios</h2>
+      <ul>
+        <li>How do I make jollof rice for a family dinner?</li>
+        <li>Which Ghanaian dishes are associated with the coast or the north?</li>
+        <li>Can I adjust a recipe for a different number of servings and print it?</li>
+      </ul>
+    </section>
+
+    <section id="color-schema">
+      <h2>Color Schema</h2>
+      <ul class="swatches">
+        <li>
+          <span class="swatch" style="background-color: #173c30;"></span>
+          <strong>#173C30</strong> – Header and footer; a deep forest green.
+        </li>
+        <li>
+          <span class="swatch" style="background-color: #c3a36b;"></span>
+          <strong>#C3A36B</strong> – Fine accents and buttons; a muted champagne gold.
+        </li>
+        <li>
+          <span class="swatch" style="background-color: #a45b48;"></span>
+          <strong>#A45B48</strong> – Occasional warm highlights, echoing Ghana's red.
+        </li>
+        <li>
+          <span class="swatch" style="background-color: #f6f2e9;"></span>
+          <strong>#F6F2E9</strong> – Soft ivory canvas for content.
+        </li>
+        <li>
+          <span class="swatch" style="background-color: #24231f;"></span>
+          <strong>#24231F</strong> – Main text color for readable content.
+        </li>
+      </ul>
+    </section>
+
+    <section id="typography">
+      <h2>Typography</h2>
+      <p class="font-display">Cormorant Garamond — used for page titles and dish headings.</p>
+      <p class="font-body">Manrope — used for body text, forms and navigation.</p>
+    </section>
+
+    <section id="wireframes">
+      <h2>Wireframes</h2>
+      <div class="wireframes">
+        <figure>
+          <figcaption>Mobile view</figcaption>
+          <div class="wireframe mobile" aria-label="Mobile home page wireframe">
+            <div class="wf-header">Site name</div>
+            <div class="wf-nav">Home · Dishes · Recipes · Regions · Contact</div>
+            <div class="wf-welcome">Welcome text<br><small>Intro and explore button</small></div>
+            <div class="wf-dish">Dish of the week<br><small>Photo, name and recipe link</small></div>
+            <div class="wf-links">Links to other pages</div>
+            <div class="wf-footer">Footer · References</div>
+          </div>
+        </figure>
+        <figure>
+          <figcaption>Desktop view</figcaption>
+          <div class="wireframe desktop" aria-label="Desktop home page wireframe">
+            <div class="wf-header">Site name</div>
+            <div class="wf-nav">Home · Dishes · Recipes · Regions · Contact</div>
+            <div class="wf-welcome">Welcome text<br><small>Intro and explore button</small></div>
+            <div class="wf-dish">Dish of the week<br><small>Photo, name and recipe link</small></div>
+            <div class="wf-links">Links to other pages</div>
+            <div class="wf-footer">Footer · References</div>
+          </div>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="current-year"></span> Adjei Tutu Samuel · Ghana</p>
+  </footer>
+  <script>
+    document.querySelector("#current-year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
