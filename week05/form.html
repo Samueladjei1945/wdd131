@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Form – WDD 131 – Adjei Tutu Samuel</title>
+  <meta name="description" content="Submit a product review for the WDD 131 Week 05 assignment.">
+  <meta name="author" content="Adjei Tutu Samuel">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">WDD 131 · Week 05</p>
+    <h1>Product Review</h1>
+    <p>Share your experience and help others choose with confidence.</p>
+  </header>
+
+  <main>
+    <form action="review.html" method="get">
+      <p class="form-intro">Fields marked <span class="required">*</span> are required.</p>
+
+      <div class="form-grid">
+        <div class="form-control">
+          <label for="product">Product Name <span class="required" aria-hidden="true">*</span></label>
+          <select id="product" name="product" required>
+            <option value="" disabled selected>Select a Product ...</option>
+          </select>
+        </div>
+
+        <div class="form-control">
+          <label for="installation-date">Date of Installation <span class="required" aria-hidden="true">*</span></label>
+          <input type="date" id="installation-date" name="installationDate" required>
+        </div>
+
+        <fieldset class="rating-fieldset form-wide">
+          <legend>Overall Rating <span class="required" aria-hidden="true">*</span></legend>
+          <div class="rating-options">
+            <label class="rating-option">
+              <input type="radio" id="rating-1" name="rating" value="1" required>
+              <span class="star" aria-hidden="true">&star;</span><span class="visually-hidden">1 star</span>
+            </label>
+            <label class="rating-option">
+              <input type="radio" id="rating-2" name="rating" value="2" required>
+              <span class="star" aria-hidden="true">&star;</span><span class="visually-hidden">2 stars</span>
+            </label>
+            <label class="rating-option">
+              <input type="radio" id="rating-3" name="rating" value="3" required>
+              <span class="star" aria-hidden="true">&star;</span><span class="visually-hidden">3 stars</span>
+            </label>
+            <label class="rating-option">
+              <input type="radio" id="rating-4" name="rating" value="4" required>
+              <span class="star" aria-hidden="true">&star;</span><span class="visually-hidden">4 stars</span>
+            </label>
+            <label class="rating-option">
+              <input type="radio" id="rating-5" name="rating" value="5" required>
+              <span class="star" aria-hidden="true">&star;</span><span class="visually-hidden">5 stars</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="features-fieldset form-wide">
+          <legend>Useful Features</legend>
+          <div class="feature-options">
+            <label for="feature-easy">
+              <input type="checkbox" id="feature-easy" name="features" value="easy-to-use">
+              Easy to use
+            </label>
+            <label for="feature-durable">
+              <input type="checkbox" id="feature-durable" name="features" value="durable">
+              Durable
+            </label>
+            <label for="feature-value">
+              <input type="checkbox" id="feature-value" name="features" value="good-value">
+              Good value
+            </label>
+            <label for="feature-performance">
+              <input type="checkbox" id="feature-performance" name="features" value="performance">
+              Works as expected
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="form-control form-wide">
+          <label for="written-review">Written Review <span class="optional">(optional)</span></label>
+          <textarea id="written-review" name="writtenReview" rows="5" placeholder="What should other customers know?"></textarea>
+        </div>
+
+        <div class="form-control form-wide">
+          <label for="user-name">Your Name <span class="optional">(optional)</span></label>
+          <input type="text" id="user-name" name="userName" autocomplete="name">
+        </div>
+
+        <div class="form-wide">
+          <input class="submit-button" type="submit" value="Submit Review">
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Adjei Tutu Samuel &ndash; Ghana</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

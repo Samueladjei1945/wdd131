@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Submitted – WDD 131 – Adjei Tutu Samuel</title>
+  <meta name="description" content="Confirmation for your WDD 131 product review.">
+  <meta name="author" content="Adjei Tutu Samuel">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body data-page="review">
+  <header class="site-header">
+    <p class="eyebrow">WDD 131 · Week 05</p>
+    <h1>Product Review</h1>
+  </header>
+
+  <main class="confirmation-main">
+    <section class="confirmation-card" aria-labelledby="confirmation-heading">
+      <p class="eyebrow">Thank you</p>
+      <h2 id="confirmation-heading">Review received</h2>
+      <p id="review-status" role="status" hidden>Your review has been recorded.</p>
+      <p id="invalid-submission" role="status" hidden>No complete review submission was found. Please submit the form first.</p>
+
+      <dl class="review-details" id="review-details" hidden>
+        <div><dt>Product</dt><dd id="review-product"></dd></div>
+        <div><dt>Rating</dt><dd id="review-rating"></dd></div>
+        <div><dt>Installed</dt><dd id="review-date"></dd></div>
+        <div><dt>Useful features</dt><dd id="review-features"></dd></div>
+        <div><dt>Your review</dt><dd id="review-text"></dd></div>
+        <div><dt>Name</dt><dd id="review-name"></dd></div>
+      </dl>
+
+      <p class="review-count" id="review-counter" hidden>
+        You have submitted <strong id="review-count">0</strong> reviews.
+      </p>
+      <a class="back-link" href="form.html">Write another review</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Adjei Tutu Samuel &ndash; Ghana</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
